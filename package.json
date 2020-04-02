@@ -1,0 +1,23 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "Virtual keyboard created with vanilla JavaScript",
+  "main": "script.js",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20Bulka20/virtual-keyboard.git"
+  },
+  "author": "20Bulka20",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/20Bulka20/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/20Bulka20/virtual-keyboard#readme"
+}
