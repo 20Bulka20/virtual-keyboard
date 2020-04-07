@@ -31,7 +31,7 @@ const Keyboard = {
         this.elements.keysContainer = document.createElement('div');
 
         //setup main elements 
-      
+
 
         this.elements.main.classList.add('keyboard', 'keyboard--hidden');
         this.elements.keysContainer.classList.add('keyboard__keys');
@@ -57,7 +57,9 @@ const Keyboard = {
 
     _createKeys() {
         const fragment = document.createDocumentFragment();
-        const keyLayout = Layout.en;        
+
+
+        const keyLayout = Layout.en;
 
         //creates HTML for an icon
         const createIconHTML = (icon_name) => {
@@ -237,7 +239,7 @@ const Keyboard = {
                         }
                     });
 
-                    break;    
+                    break;
 
                 case 'ctrll':
 
@@ -261,11 +263,11 @@ const Keyboard = {
                     });
 
                     break;
-                
+
                 case 'ctrlr':
 
-                        keyElement.classList.add('keyboard__key--wide');
-                        keyElement.textContent = 'ctrl';
+                    keyElement.classList.add('keyboard__key--wide');
+                    keyElement.textContent = 'ctrl';
                     keyElement.addEventListener('click', () => {
                         this.properties.value += '\u{2740}';
                         this._triggerEvent('oninput');
@@ -282,7 +284,7 @@ const Keyboard = {
                             keyElement.classList.remove('keyboard__key--pressed');
                         }
                     });
-    
+
                     break;
 
 
@@ -351,33 +353,33 @@ const Keyboard = {
                     break;
 
                 case 'del':
-                        keyElement.textContent = key.toLocaleLowerCase();
+                    keyElement.textContent = key.toLocaleLowerCase();
 
-                        keyElement.addEventListener('click', () => {            
-                              
-                               if(Textarea.selectionStart === Textarea.selectionEnd) {
+                    keyElement.addEventListener('click', () => {
+
+                        if (Textarea.selectionStart === Textarea.selectionEnd) {
+                            Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd + 1, 'end');
+                        } else {
+                            Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd, 'end');
+                        }
+                    });
+                    document.addEventListener('keydown', (ev) => {
+                        if (ev.code == 'Delete') {
+                            keyElement.classList.add('keyboard__key--pressed');
+                            if (Textarea.selectionStart === Textarea.selectionEnd) {
                                 Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd + 1, 'end');
-                                  } else {
-                                    Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd, 'end');
-                                  }                          
-                        });
-                        document.addEventListener('keydown', (ev) => {
-                            if (ev.code == 'Delete') {
-                                keyElement.classList.add('keyboard__key--pressed');                                
-                                if(Textarea.selectionStart === Textarea.selectionEnd) {
-                                    Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd + 1, 'end');
-                                      } else {
-                                        Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd, 'end');
-                                      }   
+                            } else {
+                                Textarea.setRangeText('', Textarea.selectionStart, Textarea.selectionEnd, 'end');
                             }
-                        });
-                        document.addEventListener('keyup', (ev) => {
-                            if (ev.code == 'Delete') {
-                                keyElement.classList.remove('keyboard__key--pressed');
-                                
-                            }
-                        });
-                        
+                        }
+                    });
+                    document.addEventListener('keyup', (ev) => {
+                        if (ev.code == 'Delete') {
+                            keyElement.classList.remove('keyboard__key--pressed');
+
+                        }
+                    });
+
                     break;
 
                 case 'caps':
@@ -467,7 +469,7 @@ const Keyboard = {
 
                 default:
                     keyElement.textContent = key.toLocaleLowerCase();
-                    let Keyindex = keyLayout.indexOf(key);                   
+                    let Keyindex = keyLayout.indexOf(key);
                     document.addEventListener('keydown', (ev) => {
 
                         ev.preventDefault();
