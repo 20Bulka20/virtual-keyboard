@@ -11,13 +11,13 @@ Layout.ru = [
     'tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'del',
     'caps', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'enter',
     'shiftl', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'shiftr', 'arrow up',
-    'ctrl', 'done', 'alt', 'space', 'alt', 'ctrl', 'arrow left', 'arrow down', 'arrow right',
+    'ctrll', 'done', 'altl', 'space', 'altr', 'ctrlr', 'arrow left', 'arrow down', 'arrow right',
 ];
 Layout.en = [
     '`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'backspace',
     'tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']','\\', 'del',
     'caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\"', 'enter',
     'shiftl', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 'shiftr', 'arrow up',
-    'ctrl', 'done', 'alt', 'space', 'alt', 'ctrl', 'arrow left', 'arrow down', 'arrow right'
+    'ctrll', 'done', 'altl', 'space', 'altr', 'ctrlr', 'arrow left', 'arrow down', 'arrow right'
 ];
 export default Layout;
